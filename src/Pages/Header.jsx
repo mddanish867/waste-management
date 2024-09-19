@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RecycleIcon, Menu } from "lucide-react";
 import { useState } from "react";
 
 export default function Header() {
+  const navigate = useNavigate();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-
+ const handleLogin = () => {
+  navigate("/login")
+ }
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b bg-white">
       {/* Logo Section */}
@@ -32,7 +35,7 @@ export default function Header() {
       {/* Mobile Menu and Login Button */}
       <div className="flex items-center space-x-4">
         {/* Login Button */}
-        <button className="hidden md:inline bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">
+        <button onClick={handleLogin} className="hidden md:inline bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300">
           Login
         </button>
 

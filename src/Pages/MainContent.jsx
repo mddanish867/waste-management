@@ -1,6 +1,12 @@
 import { ArrowRightCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function MainContent() {
+
+  const navigate = useNavigate();
+  const handleMore = () =>{
+    navigate("/landingpage")
+  }
   return (
     <main className="flex items-center justify-between px-6 py-12 bg-white flex-col md:flex-row">
       <div className="max-w-xl mb-8 md:mb-0">
@@ -11,10 +17,9 @@ export default function MainContent() {
           Save Environment
         </div>
         <p className="text-gray-600 mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Efficient Waste Management. Join us in making the world a cleaner place.
         </p>
-        <button className="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 flex items-center">
+        <button onClick={handleMore} className="bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition duration-300 flex items-center">
           Read More
           <ArrowRightCircle className="ml-2 h-5 w-5" />
         </button>
