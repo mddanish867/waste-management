@@ -8,6 +8,15 @@ export default function Header() {
  const handleLogin = () => {
   navigate("/login")
  }
+ const navLink = [
+  {name: "Home",link:"/"},
+  {name: "About",link:"/aboutus" },
+  {name: "Services",link:"/services" },
+   { name: "Blog",link:"/blog"},
+     { name:"FAQ", link:"/faq" },
+      {name :"Projects", link:"/projects"},
+      {name: "Contact Us", link:"/contactus"}
+ ]
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center justify-between border-b bg-white">
       {/* Logo Section */}
@@ -18,14 +27,14 @@ export default function Header() {
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex space-x-6">
-        {["Home", "About", "Blog", "FAQ", "Projects", "Contact Us"].map(
+        {navLink.map(
           (item) => (
-            <li key={item} className="list-none">
+            <li key={item.name} className="list-none">
               <Link
-                to="#"
+                to={item.link}
                 className="text-gray-600 hover:text-green-500 transition"
               >
-                {item}
+                {item.name}
               </Link>
             </li>
           )
