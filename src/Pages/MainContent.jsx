@@ -22,7 +22,7 @@ export default function MainContent() {
       <div className="relative w-full max-w-xs">
         <div className="bg-green-100 rounded-full p-4">
           <img
-            src="https://picsum.photos/seed/picsum/400/400"
+            src="https://picsum.photos/seed/picsum/600/600"
             alt="Person sorting waste"
             className="rounded-full"
           />
