@@ -9,6 +9,8 @@ import ServiceAndPolicy from "./ServiceAndPolicy";
 import Pricing from "./Pricing";
 import WastePickup from "./WastePickup";
 import FAQ from "./FAQItem";
+import UserAnalyticDashboard from "./UserAnalyticDashboard";
+import AdminDashboard from "./AdminDashboard";
 export default function Home() {
   return (
     <>
@@ -22,6 +24,8 @@ export default function Home() {
       <Pricing/>
       <WastePickup/>
       <FAQ/>
+      <UserAnalyticDashboard/>
+      <AdminDashboard/>
       <Footer />
     </>
   );
